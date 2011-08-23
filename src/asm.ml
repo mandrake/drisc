@@ -37,11 +37,17 @@ type asm =
 |  GOTOR of reg
 |  GOTOL of label
 |  IFLEQ of reg*reg*label
+|  IFLEQI of reg*const*label
 |  IFLE of reg*reg*label
+|  IFLEI of reg*const*label
 |  IFGEQ of reg*reg*label
+|  IFGEQI of reg*const*label
 |  IFGE of reg*reg*label
+|  IFGEI of reg*const*label
 |  IFEQ of reg*reg*label
+|  IFEQI of reg*const*label
 |  IFNEQ of reg*reg*label
+|  IFNEQI of reg*const*label
 |  END
 ;;
 
