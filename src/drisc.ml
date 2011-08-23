@@ -363,3 +363,10 @@ let autostepper m ipc prg steps = stepper (maxreg prg 0) m ipc prg steps
 		@param prg The instruciont list (the program) *)
 let autoexecute m ipc prg = execute (maxreg prg 0) m ipc prg
 ;;
+
+(** Execute an Instruction List till the END instruction
+        with default memory size and Register set.
+        @param prg The instruction list (the program) *)
+
+let run prg = execute regs memsize 0 prg
+;;

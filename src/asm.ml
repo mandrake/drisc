@@ -349,13 +349,7 @@ let rec pp_deps = function
 let rec prog_to_asm p = 
   List.map delab p;;
   
-(* 
-=============================
-
-Gestione dei Salti
-
-=============================
-*)
+(* Jumps management *)
 
 (** Check if an ASM instruction in a jump istruction
                 @param istr the ASM instruction
@@ -429,6 +423,4 @@ let rec pp_jumps = function
    [] -> ()
 |  x::xs -> (pp_jump x);(pp_jumps xs);;
 
-(* 
-=============================
-*)  
+(* END Jump management *)  
